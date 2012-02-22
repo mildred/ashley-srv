@@ -1,0 +1,6 @@
+[submodule "backup"]
+	path = backup
+	url = git@github.com:mildred/backup.git
+[submodule "mail"]
+	path = mail
+	url = git@github.com:mildred/mail-dovecot-postfix-vmail-config.git
