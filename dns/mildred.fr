@@ -1,0 +1,27 @@
+@                       28800  A      208.94.116.109
+@                       28800  A      208.94.116.76
+@                       28800  A      208.94.117.62
+www                     28800  A      208.94.116.109
+www                     28800  A      208.94.116.76
+www                     28800  A      208.94.117.62
+survie                  28800  A      208.94.116.23
+survie                  28800  A      208.94.116.52
+survie                  28800  A      208.94.117.87
+agrippa                 28800  A      88.185.152.87
+fontaine                28800  A      88.185.152.87
+ashley                  28800  AAAA   2a01:e35:8b99:8570::2
+ashley6                 28800  AAAA   2a01:e35:8b99:8570::2
+ashley4                 28800  A      88.185.152.87
+ashley4                 28800  AAAA   2a01:e35:8b99:8570::2
+mx                      28800  CNAME  ashley4
+mail                    28800  CNAME  ashley4
+imap                    28800  CNAME  ashley4
+smtp                    28800  CNAME  ashley4
+
+@                       28800  TXT    "v=spf1 +a:mx.mildred.fr -all"
+@                       28800  MX     10 mx
+
+_imap._tcp              28800  SRV    0 1 143 mail.mildred.fr.
+_pop3._tcp              28800  SRV    0 1 110 mail.mildred.fr.
+_submission._tcp        28800  SRV    0 1 25  mail.mildred.fr.
+_http._tcp              28800  SRV    0 1 80  www.mildred.fr.

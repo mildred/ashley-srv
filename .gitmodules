@@ -4,3 +4,6 @@
 [submodule "mail"]
 	path = mail
 	url = git@github.com:mildred/mail-dovecot-postfix-vmail-config.git
+[submodule "http/www"]
+	path = http/www
+	url = git@github.com:mildred/mildred.fr.git
