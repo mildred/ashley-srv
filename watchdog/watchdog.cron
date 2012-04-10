@@ -1,0 +1,5 @@
+
+PATH=/usr/lib/redo:/usr/bin/redo-sh:/usr/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+
+* * * * * root /srv/watchdog/watchdog.sh
+
