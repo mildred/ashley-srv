@@ -1,0 +1,17 @@
+#!/bin/sh
+
+ok=true
+
+for pkg in "$@"; do
+  if ! dpkg -p "$pkg" >/dev/null 2>&1; then
+    ok=false
+    break
+  fi
+done
+
+if $ok; then
+  echo "Already installed: $@"
+else
+  exec aptitude --no-gui -y install "$@"
+fi
+
