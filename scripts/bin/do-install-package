@@ -12,6 +12,6 @@ done
 if $ok; then
   echo "Already installed: $@"
 else
-  exec aptitude --no-gui -y install "$@"
+  exec aptitude --no-gui -y install "$@" </dev/null
 fi
 
