@@ -1,0 +1,24 @@
+#!/bin/echo do-shlib should be sourced by your shell
+
+echo ${BASH_SOURCE:-${DASH_SOURCE:-}}
+
+# do-pidfile PID PIDFILE
+#
+# Put the PID in the PIDFILE if the pid it contains does not refer to a
+# running process. If the PIDFILE refers to a running process, return with an
+# error
+
+do_pidfile() {
+  : >> "$2"
+  local pid="$(cat "$2")"
+  if [ -n "$pid" ] && [ -e /proc/$pid ]; then
+    return 1
+  else
+    echo "$1" >"$2"
+    return 0
+  fi
+}
+
+shopt -s expand_aliases 2>/dev/null
+alias do-pidfile=do_pidfile
+

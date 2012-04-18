@@ -1,0 +1,10 @@
+#!/bin/sh
+exec 2>&1
+
+exec setuidgid gitolite fcgiwrap -s tcp:127.0.0.1:9002 
+
+# export FCGI_SOCKET_PATH=$(pwd)/fastcgi.sock
+# export FCGI_SOCKET_PATH=127.0.0.1:9002
+# cd /usr/share/gitweb
+# exec setuidgid gitolite ./gitweb.cgi --fastcgi
+

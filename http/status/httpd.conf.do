@@ -1,3 +1,4 @@
+redo-ifchange ../domain
 
 cat >"$3" <<EOF
 
@@ -5,7 +6,7 @@ cat >"$3" <<EOF
 # NameVirtualHost *:80
 
 <VirtualHost *:80>
-  ServerName status.mildred.fr
+  ServerName status.$(cat ../domain)
   DocumentRoot /var/cache/munin/www
 
   <Location />
