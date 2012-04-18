@@ -7,3 +7,6 @@
 [submodule "http/www"]
 	path = http/www
 	url = git@github.com:mildred/mildred.fr.git
+[submodule "git/gitolite"]
+	path = git/gitolite
+	url = git://github.com/sitaramc/gitolite
