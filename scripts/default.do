@@ -1,1 +1,3 @@
-cc "src/$(basename "$1.c")" -o $3
+src="src/$(basename "$1.c")"
+redo-ifchange "$src"
+cc "$src" -o $3
